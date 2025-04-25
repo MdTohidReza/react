@@ -1,0 +1,20 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+table{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: #6e1010;
+}
+td{
+    border: 1px solid black;
+    background-color: #f2f2f2;
+}
+tr{
+    border: 1px solid black;
+}
