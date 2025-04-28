@@ -43,7 +43,7 @@ export default App
 
 /*Note
 
-on the basis of this code React only remember the color while the app is open. when you refresh
+on the basis of this code React only remember the present color while the app is open. when you refresh
 the react forget it and start from the beginning.
 
 useState("olive") tells React: "Start with the color olive."
