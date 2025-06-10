@@ -9,17 +9,24 @@ function Todos() {
 
 
     return (
-        <>
+      <>
         <div>Todos</div>
         <ul className="list-none">
-            {todos.map((todo) => (
-              <li
-                className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
-                key={todo.id}
-              >
-                <div className='text-white'>{todo.text}</div>
+          {todos.map((todo) => (
+            <li
+              className="mt-4 flex justify-between items-center bg-zinc-800 px-4 py-2 rounded"
+              key={todo.id}
+            >
+              <div className="text-white">{todo.text}</div>
+    
+
+              <div className="flex items-center gap-3">
+                <button onClick={()=> dispatch({ type: 'todos/toggle', payload: todo.id })}
+                className="bg-white px-5 rounded py-1 text-black">
+                  Update
+                </button>
                 <button
-                 onClick={() => dispatch(removeTodo(todo.id))}
+                  onClick={() => dispatch(removeTodo(todo.id))}
                   className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
                 >
                   <svg
@@ -37,11 +44,12 @@ function Todos() {
                     />
                   </svg>
                 </button>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    }
+              </div>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  }
 
 export default Todos
